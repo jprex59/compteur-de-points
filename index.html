@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet" />
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<!--<link rel="icon" href="./img/logo/alscityrp.png" />--->
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/b8f4ab5226.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./css/index.css" />
+		<link rel="stylesheet" href="./css/minuteur.css" />
+		<title>ChronoPoint</title>
+	</head>
+	<body>
+		<div class="container container_own">
+			<div id="chrono_container" class="block">
+				<div id="chrono">
+					<p><span id="minute">00</span>:<span id="seconds">00</span>:<span id="millisecond">00</span></p>
+				</div>
+				<span class="block container_button_chrono">
+					<div class="button_own" id="startstop" onClick="startChrono()"><i class="far fa-play-circle"></i></div>
+					<div class="button_own" id="resetChrono" onClick="chronoReset()"><i class="far fa-stop-circle"></i></div>
+				</span>
+			</div>
+
+			<p class="subtitle is-5 subtitle_own">Clic to add a team <i class="fas fa-user-plus"></i></p>
+			<div id="container" class="container_teamScore block">
+				<div class="card_score">
+					<p class="equipe">1</p>
+					<p class="score" id="player_number">0</p>
+					<div class="scoreLess"></div>
+				</div>
+			</div>
+			<div class="is-centered block">
+				<div id="go" class="button_own button_go" onclick="go()"><i class="fas fa-play"></i></div>
+				<div id="backdrop_button" class="button_own" onclick="reset()" style="display: none">
+					<i class="fas fa-undo"></i>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<div class="backdrop"></div>
+			<div class="button_own backdrop-item" onclick="resetScore()">Reset score</div>
+			<div class="button_own backdrop-item" onclick="resetGame()">Reset game</div>
+			<div class="button_own backdrop-item" onclick="backdropNone()">Cancel</div>
+		</nav>
+		<!----------------------------->
+		<script type="text/javascript" src="./js/index.js"></script>
+	</body>
+</html>
